@@ -1,5 +1,6 @@
 {
     "name": "fl/parserfl",
+    "type": "fl-widget",
     "description": "description",
     "minimum-stability": "stable",
     "license": "proprietary",
@@ -8,5 +9,8 @@
             "name": "Aleksey Anikeev",
             "email": "aniks@mail.ru"
         }
-    ]
+    ],
+    "require": {
+        "composer/installer": "~1.0"
+    }
 }
