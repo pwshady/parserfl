@@ -1,0 +1,4 @@
+#keys 
+#base_url - required key. Type - string.  
+#mode - optional key. Type - string. Default - get_page Value: get_page||get_html_page||data||print||job
+#headers - optional key. Type - array.

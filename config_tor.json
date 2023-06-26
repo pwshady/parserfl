@@ -1,0 +1,285 @@
+{
+    "_mode": "",
+    "base_url": "https://www.gtdb.to",
+    "mode": "job",
+    "headers": [],
+    "key_name": "",
+    "key": "1",
+    "url_name": "url",
+    "max_time": "",
+    "max_error": "2",
+    "block": "300",
+    "type_pagination": "next",
+    "max_pagination": "",
+    "mask": {
+        "0": {
+            "prefix": {
+                "0": "<form id='sort' action=''>",
+                "1": "</form>"
+            },
+            "data": {
+                "type": "single",
+                "name": "test",
+                "mask": {
+                    "0": {
+                        "prefix": {
+                            "0": "<table"
+                        },
+                        "data": {
+                            "type": "single",
+                            "name": "table",
+                            "mask": {
+                                "0": {
+                                    "prefix": {
+                                        "0": "<td"
+                                    },
+                                    "data": {
+                                        "type": "multi",
+                                        "name": "torrents",
+                                        "mask": {
+                                            "0": {
+                                                "prefix": {
+                                                    "0": ">",
+                                                    "1": ">"
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "<"
+                                                }
+                                            },
+                                            "1": {
+                                                "prefix": {
+                                                    "0": "<a title=\""
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "\" href"
+                                                }
+                                            },
+                                            "2": {
+                                                "prefix": {
+                                                    "0": "=\""
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "\">"
+                                                }
+                                            },
+                                            "3": {
+                                                "prefix": {
+                                                    "0": "<a href=",
+                                                    "1": "href=\""
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "\""
+                                                }
+                                            },
+                                            "4": {
+                                                "prefix": {
+                                                    "0": "align='center'>"
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "<"
+                                                }
+                                            },
+                                            "5": {
+                                                "prefix": {
+                                                    "0": "<b>"
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "</b>"
+                                                }
+                                            },
+                                            "6": {
+                                                "prefix": {
+                                                    "0": "<b>"
+                                                },
+                                                "data": {
+                                                    "type": "single"
+                                                },
+                                                "postfix": {
+                                                    "0": "</b>"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "postfix": {
+                                        "0": "</tr>"
+                                    }
+                                }
+                            }
+                        },
+                        "postfix": {
+                            "0": "</table><br />"
+                        }
+                    },
+                    "1": {
+                        "prefix": {
+                            "0": "<"
+                        },
+                        "data": {
+                            "type": "single",
+                            "name": "pag",
+                            "mask": {
+                                "0": {
+                                    "data": {
+                                        "type": "revers",
+                                        "mask": {
+                                            "0": {
+                                                "prefix": {
+                                                    "0": ">\""
+                                                },
+                                                "data": {
+                                                    "type": "single",
+                                                    "mask": {
+                                                        "0": {
+                                                            "data": {
+                                                                "type": "revers"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "postfix": {
+                                                    "0": "\"=ferh a"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "postfix": {
+                            "0": "<b>NEXT"
+                        }
+                    }
+                }
+            },
+            "postfix": {
+                "0": "</fieldset>"
+            }
+        }
+    },
+    "mask_data": {
+        "0": {
+            "key": "test",
+            "type": "datas",
+            "mask_data": {
+                "0": {
+                    "key": "table",
+                    "type": "datas",
+                    "mask_data": {
+                        "0": {
+                            "key": "torrents",
+                            "type": "table",
+                            "params": {
+                                "table_name": "torrents",
+                                "type": "",
+                                "uniq": "magnet",
+                                "row": {
+                                    "id": {
+                                        "type": "const",
+                                        "value": ""
+                                    },
+                                    "type": {
+                                        "type": "data",
+                                        "name": "0"
+                                    },
+                                    "title": {
+                                        "type": "data",
+                                        "name": "1",
+                                        "dtype": "is_string"
+                                    },
+                                    "link": {
+                                        "type": "data",
+                                        "name": "2"
+                                    },
+                                    "magnet": {
+                                        "type": "data",
+                                        "name": "3",
+                                        "dtype": "is_string"
+                                    },
+                                    "size": {
+                                        "type": "data",
+                                        "name": "4"
+                                    },
+                                    "seed": {
+                                        "type": "data",
+                                        "name": "5"
+                                    },
+                                    "leech": {
+                                        "type": "data",
+                                        "name": "6"
+                                    },
+                                    "date": {
+                                        "type": "func",
+                                        "name_func": "time"
+                                    },
+                                    "ist": {
+                                        "type": "const",
+                                        "value": "1"
+                                    },
+                                    "details": {
+                                        "type": "const",
+                                        "value": "0"
+                                    },
+                                    "hash": {
+                                        "type": "func",
+                                        "name_func": "pars",
+                                        "name": "3",
+                                        "value": {
+                                            "prefix": {
+                                                "0": ":",
+                                                "1": ":",
+                                                "2": ":"
+                                            },
+                                            "postfix": {
+                                                "0": "&"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "1": {
+                    "key": "pag",
+                    "type": "datas",
+                    "mask_data": {
+                        "0": {
+                            "key": "0",
+                            "type": "datas",
+                            "mask_data": {
+                                "0": {
+                                    "key": "0",
+                                    "type": "datas",
+                                    "mask_data": {
+                                        "0": {
+                                            "key": "0",
+                                            "type": "pagination"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

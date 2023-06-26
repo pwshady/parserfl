@@ -1,0 +1,326 @@
+{
+    "base_url": "https://www.gtdb.to",
+    "mode": "job",
+    "headers": [],
+    "max_error": "2",
+    "mask": {
+        "0": {
+            "prefix": {
+                "0": "<legend><b>Details</b></legend><table"
+            },
+            "data": {
+                "type": "single",
+                "name": "details",
+                "mask": {
+                    "0": {
+                        "prefix": {
+                            "0": "<tr>",
+                            "1": "<td>"
+                        },
+                        "data": {
+                            "type": "single",
+                            "name": "name"
+                        },
+                        "postfix": {
+                            "0": "</td>",
+                            "1": "</tr>"
+                        }
+                    },
+                    "1": {
+                        "prefix": {
+                            "0": "<tr>",
+                            "1": ">",
+                            "2": "</b>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</td>",
+                            "1": "</tr>"
+                        }
+                    },
+                    "2": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "3": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "4": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "5": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "6": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "7": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "8": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    },
+                    "9": {
+                        "prefix": {
+                            "0": "<tr>"
+                        },
+                        "data": {
+                            "type": "single"
+                        },
+                        "postfix": {
+                            "0": "</tr>"
+                        }
+                    }
+                }
+            },
+            "postfix": {
+                "0": "</table>"
+            }
+        },
+        "1": {
+            "prefix": {
+                "0": "<table"
+            },
+            "data": {
+                "type": "single"
+            },
+            "postfix": {
+                "0": "</table>"
+            }
+        },
+        "2": {
+            "prefix": {
+                "0": "<table"
+            },
+            "data": {
+                "type": "single",
+                "name": "trackers",
+                "mask": {
+                    "0": {
+                        "prefix": {
+                            "0": "font"
+                        },
+                        "data": {
+                            "type": "multi",
+                            "name": "tracker",
+                            "mask": {
+                                "0": {
+                                    "prefix": {
+                                        "0": "<b>"
+                                    },
+                                    "data": {
+                                        "type": "single",
+                                        "name": "name"
+                                    },
+                                    "postfix": {
+                                        "0": "<"
+                                    }
+                                }
+                            }
+                        },
+                        "postfix": {
+                            "0": "</font>"
+                        }
+                    }
+                }
+            },
+            "postfix": {
+                "0": "/table>"
+            }
+        },
+        "3": {
+            "prefix": {
+                "0": "<table"
+            },
+            "data": {
+                "type": "single",
+                "name": "files",
+                "mask": {
+                    "0": {
+                        "prefix": {
+                            "0": "table_col"
+                        },
+                        "data": {
+                            "type": "multi",
+                            "name": "file",
+                            "mask": {
+                                "0": {
+                                    "prefix": {
+                                        "0": ">"
+                                    },
+                                    "data": {
+                                        "type": "single",
+                                        "name": "name"
+                                    },
+                                    "postfix": {
+                                        "0": "<"
+                                    }
+                                },
+                                "1": {
+                                    "prefix": {
+                                        "0": ">",
+                                        "1": ">"
+                                    },
+                                    "data": {
+                                        "type": "single",
+                                        "name": "size"
+                                    },
+                                    "postfix": {
+                                        "0": "<"
+                                    }
+                                }
+                            }
+                        },
+                        "postfix": {
+                            "0": "/tr>"
+                        }
+                    }
+                }
+            },
+            "postfix": {
+                "0": "/table>"
+            }
+        }
+    },
+    "mask_data": {
+        "0": {
+            "key": "details",
+            "type": "row",
+            "params": {
+                "table_name": "torrentsd",
+                "row": {
+                    "id": {
+                        "type": "const",
+                        "value": ""
+                    },
+                    "hash": {
+                        "type": "params",
+                        "value": "hash"
+                    },
+                    "desc": {
+                        "type": "data",
+                        "name": "1"
+                    }
+                }
+            }
+        },
+        "1": {
+            "key": "trackers",
+            "type": "datas",
+            "mask_data": {
+                "0": {
+                    "key": "tracker",
+                    "type": "table",
+                    "params": {
+                        "table_name": "torrentst",
+                        "row": {
+                            "id": {
+                                "type": "const",
+                                "value": ""
+                            },
+                            "hash": {
+                                "type": "params",
+                                "value": "hash"
+                            },
+                            "name": {
+                                "type": "data",
+                                "name": "name",
+                                "dtype": "is_string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "2": {
+            "key": "files",
+            "type": "datas",
+            "mask_data": {
+                "0": {
+                    "key": "file",
+                    "type": "table",
+                    "params": {
+                        "table_name": "torrentf",
+                        "row": {
+                            "id": {
+                                "type": "const",
+                                "value": ""
+                            },
+                            "hash": {
+                                "type": "params",
+                                "value": "hash"
+                            },
+                            "name": {
+                                "type": "data",
+                                "name": "name",
+                                "dtype": "is_string"
+                            },
+                            "size": {
+                                "type": "data",
+                                "name": "size",
+                                "dtype": "is_string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
