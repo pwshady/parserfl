@@ -1,6 +1,5 @@
 {
     "name": "fl/parserfl",
-    "type": "fl-widget",
     "description": "description",
     "minimum-stability": "stable",
     "license": "proprietary",
