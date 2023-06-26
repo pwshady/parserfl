@@ -1,0 +1,12 @@
+{
+    "name": "fl/parserfl",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Aleksey Anikeev",
+            "email": "aniks@mail.ru"
+        }
+    ]
+}
